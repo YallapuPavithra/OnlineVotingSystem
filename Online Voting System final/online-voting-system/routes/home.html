@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>VoteDigital</title>
+        <link rel="stylesheet" href="sty.css"/>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header class="header">
+            <a href="../routes" class="logo">VoteDigital</a>
+            <nav class="navbar">
+                <a href="../routes">Home</a>
+                <a href="about.html">About</a>
+                <a href="serv.php">Services</a>
+                <a href="cont.php">Contact</a>
+                <button class="btnLogin-popup">Login</button>
+            </nav>
+        </header>
+        <section class="section">
+            <div class="wrapper">
+                <span class="icon-close"><i class='bx bx-x' ></i></span>
+                <div class="logreg-box">
+                    <!--Login form-->
+                    <div class="form-box login">
+                        <div class="logreg-title">
+                            <h2>Login</h2>
+                            <p>Please login to use the platform</p>
+                        </div>
+                        <form action="../api/login.php" method="POST">
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-envelope'></i></span>
+                                <input type="email" name="email" required>
+                                <label>Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                                <input type="password" name="password" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="input-box"> 
+                                <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                                <div class="dropdown" style="width:5000px;">
+                                    <select id="roleSelect" name="role">
+                                        <option value="">Select your role</option>
+                                        <option value="1">Voter</option>
+                                        <option value="2">Group</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <button type="submit"
+                            class="btn">Login</button>
+                            <div class="logreg-link">
+                                <p>Don't have an account? <a href="#" class="register-link">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                    <!--register form-->
+                    <div class="form-box register">
+                        <div class="logreg-title">
+                            <h2>Registration</h2>
+                            <p>Please prvide the following to verify your identity</p>
+                        </div>
+                        <form action="../api/register.php" method="POST">
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-user'></i></span>
+                                <input type="text" name="name" required>
+                                <label>Name</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-envelope'></i></span>
+                                <input type="email" name="email" required>
+                                <label>Email</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-lock-alt'></i></span>
+                                <input type="password" name="password" required>
+                                <label>Password</label>
+                            </div>
+                            <div class="input-box">
+                                <span class="icon"><i class='bx bxs-user-circle'></i></span>
+                                <div class="dropdown" style="width:200px;">
+                                    <select id="roleSelect" name="role">
+                                        <option value="">Select Your Role:</option>
+                                        <option value="1">Voter</option>
+                                        <option value="2">Group</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit"
+                            class="btn">Register</button>
+                            <div class="logreg-link">
+                                <p>Already have an account? <a href="#" class="login-link">Login</a></p>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <script src="script.js"></script>
+    </body>
+</html>
